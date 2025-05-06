@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Il Mio Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="fade-in">Ciao, sono [Tuo Nome]</h1>
-    <p class="fade-in delay-1">Sviluppatore Web & Designer</p>
-  </header>
+    <header>
+        <div class="container">
+            <h1 class="logo">Nome del Brand</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#about">Chi Sono</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="projects fade-in delay-2">
-    <h2>I miei progetti</h2>
-    <!-- Aggiungeremo progetti qui -->
-  </section>
+    <section id="hero">
+        <div class="container">
+            <h2>Benvenuti nel mio portfolio</h2>
+            <p>Design creativo e moderno per il futuro.</p>
+        </div>
+    </section>
 
-  <footer class="fade-in delay-3">
-    <p>Contattami: <a href="mailto:tua@email.com">tua@email.com</a></p>
-  </footer>
+    <section id="about">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <p>Descrizione breve su di te e le tue competenze.</p>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="projects">
+                <!-- Aggiungi qui i tuoi progetti -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contatti</h2>
+            <p>Come raggiungermi per collaborazioni o altre richieste.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nome del Brand. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
