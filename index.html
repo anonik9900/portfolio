@@ -1,72 +1,310 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Nome del Brand</h1>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#about">Chi Sono</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contatti</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1 class="logo">Menu</h1>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>      
+    </div>
+    <nav id="navbar" class="">
+      <ul>
+        <li><a href="#hero" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Chi sono</a></li>
+        <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Benvenuti nel mio portfolio</h2>
-            <p>Design creativo e moderno per il futuro.</p>
-        </div>
-    </section>
+  <section id="hero">
+    <div class="container">
+        <h1>Ciao mi chiamo Nicholas Impieri <></h1> 
+      <h2>Benvenuto nel mio portfolio</h2>
+      <p>Progetto Design creativi e moderni per il futuro.</p>
+    </div>
+  </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>Chi Sono</h2>
-            <p>Descrizione breve su di te e le tue competenze.</p>
-        </div>
-    </section>
+  <!--<section id="about">
+    <div class="container">
+      <h2>Chi Sono</h2>
+      <p>Descrizione breve su di te e le tue competenze.</p>
+    </div>
+  </section>-->
 
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="projects">
-                <!-- Aggiungi qui i tuoi progetti -->
-            </div>
+  <section id="chi-sono" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h1>Chi sono</h1>
+          <p>Ciao, sono Nicholas, un'amante del design e dello sviluppo web con una passione per creare esperienze digitali moderne e funzionali. Mi piace esplorare soluzioni creative 
+            e minimaliste per soddisfare le esigenze dei clienti e migliorare l'usabilità dei progetti.
+          <hr> Mi occupo anche di Vendita Sales di alcuni brand di Telefonia Fissa e Mobile, mostrando al cliente come la sua quotidianità può migliorare grazie ai servizi del
+           Brand che rappresento</p>
+          <p>Da 4 anni, mi dedico a [design web, sviluppo frontend, etc.] e continuo a imparare nuove tecnologie per rimanere sempre aggiornato sulle ultime tendenze del settore.</p>
+          <ul>
+            <li><strong>Esperienza:</strong> 4 anni di esperienza nel Promoting, Sales Vendor e Brand Ambassador</li>
+            <li><strong>Competenze:</strong> HTML, CSS, JavaScript, React, UX/UI Design nel campo Web</li>
+            <li><strong>Interessi:</strong> Design minimalista, User Experience, Innovazione digitale</li>
+          </ul>
         </div>
-    </section>
+        <!--<div class="about-photo">
+          <img src="path/to/your-photo.jpg" alt="Foto di [Il Tuo Nome]" />
+        </div>-->
+      </div>
+    </div>
+  </section>
+  
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contatti</h2>
-            <p>Come raggiungermi per collaborazioni o altre richieste.</p>
+  <!--<section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p>Alcuni progetti realizzati...</p>
+    </div>
+  </section>-->
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projects">
+        <div class="project-card fade-in">
+          <img src="img/placeholder.png" alt="Progetto 1" class="project-img" onclick="openLightbox(this)" data-title="Progetto 1" data-desc="Descrizione del progetto 1.">
+          <h3>Progetto 1</h3>
+          <p>Descrizione breve del progetto. Design moderno, codice pulito.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Nome del Brand. Tutti i diritti riservati.</p>
+        <div class="project-card fade-in">
+          <img src="img/placeholder.png" alt="Progetto 2" class="project-img" onclick="openLightbox(this)" data-title="Progetto 2" data-desc="Descrizione del progetto 2.">
+          <h3>Progetto 2</h3>
+          <p>Descrizione breve del progetto. Responsive e minimalista.</p>
         </div>
-    </footer>
+        <div class="project-card fade-in">
+            <img src="img/placeholder.png" alt="Progetto 3" class="project-img" onclick="openLightbox(this)" data-title="Progetto 3" data-desc="Descrizione del progetto 3.">
+            <h3>Progetto 3</h3>
+            <p>Descrizione breve del progetto. Responsive e minimalista.</p>
+          </div>
+      </div>      
+  </section>
+  
 
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('active');
+  <!--<section id="contact">
+    <div class="container">
+      <h2>Contatti</h2>
+      <p>Come contattarmi per collaborazioni.</p>
+    </div>
+  </section>-->
+
+  <section id="contattami" class="contact-section">
+    <div class="container">
+      <h2>Contattami</h2>
+      <p>Per qualsiasi domanda o per avviare una collaborazione, non esitare a contattarmi utilizzando il modulo qui sotto.</p>
+      
+      <!-- Modulo di contatto -->
+      <form action="mailto:impieri.nicholas@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="La tua email" required />
+        </div>
+        <div class="form-group">
+          <label for="messaggio">Messaggio</label>
+          <textarea id="messaggio" name="messaggio" placeholder="Il tuo messaggio" required></textarea>
+        </div>
+        <button type="submit">Invia</button>
+      </form>
+  
+      <!-- Dettagli di contatto -->
+      <!--<div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:tuo@email.com">tuo@email.com</a></p>
+      </div>-->
+    </div>
+  </section>
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Nicholas Impieri | Made With ☕</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/nicholas.impieri/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://github.com/anonik9900/" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nicholas-impieri-30b61b153/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://x.com/Anonik99" target="_blank" aria-label="X (ex Twitter)">
+          <i class="fab fa-x"></i>
+        </a>
+        <a href="https://instagram.com/i.m_nico" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+  </footer>
+
+
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
-    </script>
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+  
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      navbar.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
+
+<!--<script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    }
+  
+    function closeLightbox(event) {
+      if (!event || event.target.id === "lightbox" || event.target.classList.contains("close-btn")) {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    }
+  </script>-->
+
+  <!--<script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxTitle = document.getElementById("lightbox-title");
+      const lightboxDesc = document.getElementById("lightbox-desc");
+  
+      lightboxImg.src = img.src;
+      lightboxTitle.textContent = img.getAttribute("data-title");
+      lightboxDesc.textContent = img.getAttribute("data-desc");
+  
+      lightbox.style.display = "flex";
+    }
+  
+    function closeLightbox(event) {
+      if (!event || event.target.id === "lightbox" || event.target.classList.contains("close-btn")) {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    }
+  </script>-->
+
+  <script>
+    let currentIndex = 0;
+    let images = [];
+  
+    function openLightbox(img) {
+      images = Array.from(document.querySelectorAll('.project-img'));
+      currentIndex = images.indexOf(img);
+  
+      updateLightbox(images[currentIndex]);
+      document.getElementById("lightbox").style.display = "flex";
+    }
+  
+    function updateLightbox(img) {
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  // Rimuove la classe di visibilità e il movimento, per far partire la transizione
+  lightboxImg.classList.remove("show");
+  lightboxImg.style.transform = "translateX(100%)"; // Sposta l'immagine fuori dallo schermo
+
+  // Aspetta un piccolo intervallo prima di cambiare l'immagine
+  setTimeout(() => {
+    lightboxImg.src = img.src;
+    document.getElementById("lightbox-title").textContent = img.getAttribute("data-title");
+    document.getElementById("lightbox-desc").textContent = img.getAttribute("data-desc");
+
+    // Riapplica l'effetto di slide
+    requestAnimationFrame(() => {
+      lightboxImg.style.transform = "translateX(0)"; // Sposta l'immagine nella posizione finale
+      lightboxImg.classList.add("show"); // Mostra l'immagine con fade in
+    });
+  }, 100);
+}
+
+
+  
+    function closeLightbox(event) {
+      if (!event || event.target.id === "lightbox" || event.target.classList.contains("close-btn")) {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    }
+  
+    function prevImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightbox(images[currentIndex]);
+    }
+  
+    function nextImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightbox(images[currentIndex]);
+    }
+  </script>
+  
+  
+
+  
+  
+
+  <!--<div id="lightbox" onclick="closeLightbox(event)">
+    <span class="close-btn" onclick="closeLightbox(event)">×</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Preview">
+      <h2 id="lightbox-title"></h2>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>-->
+  <div id="lightbox" onclick="closeLightbox(event)">
+    <span class="close-btn" onclick="closeLightbox(event)">×</span>
+    
+    <span class="arrow left-arrow" onclick="prevImage(event)">&#10094;</span>
+    <span class="arrow right-arrow" onclick="nextImage(event)">&#10095;</span>
+    
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Preview">
+      <h2 id="lightbox-title"></h2>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+  
+
+
+
+  
+  
+
 </body>
 </html>
